@@ -6,7 +6,13 @@
     <title>Lisbeth Sahl Bauditz | Værker</title>
     <meta
       name="description"
-      content="Et kurateret v1-udkast til Lisbeth Sahl Bauditz' kunstnerhjemmeside."
+      content="Et mørkere, mere kurateret portfolio-udkast for Lisbeth Sahl Bauditz."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
     >
     <link rel="preconnect" href="https://sahlart.dk">
     <link rel="stylesheet" href="styles.css">
@@ -20,93 +26,80 @@
         <small>Copenhagen based artist</small>
       </a>
       <nav class="nav-links" aria-label="Primær navigation">
-        <a href="#works">Værker</a>
-        <a href="#text">Tekst</a>
-        <a href="#cv">CV</a>
+        <a href="#featured">Udvalgte værker</a>
+        <a href="#themes">Temaer</a>
+        <a href="#sequence">Udstilling</a>
+        <a href="#about">Om</a>
         <a href="#contact">Kontakt</a>
       </nav>
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-media">
-          <img
-            src="https://sahlart.dk/wp-indhold/uploads/2015/11/Paint_238-scaled.jpg"
-            alt="Maleriet Juleaften af Lisbeth Sahl Bauditz"
-            width="2560"
-            height="1904"
-          >
-        </div>
-        <div class="hero-copy">
-          <p class="eyebrow">V1 kunstnerportfolio</p>
-          <h1 id="hero-title">Værker med plads til at blive opdaget.</h1>
-          <p>
-            Et roligere udkast til sahlart.dk, hvor værkerne ikke kun vises som et samlet arkiv,
-            men som små indgange til Lisbeth Sahls billedverden.
-          </p>
-          <div class="hero-actions" aria-label="Primære handlinger">
-            <a class="button primary" href="#works">Se værkgrupper</a>
-            <a class="button secondary" href="#text">Læs kunstnertekst</a>
-          </div>
-        </div>
+        <div class="hero-copy" id="hero-copy"></div>
+        <figure class="hero-media" id="hero-media"></figure>
       </section>
 
-      <section class="intro-band" aria-labelledby="discover-title">
-        <div class="section-heading">
-          <p class="eyebrow">Gå på opdagelse</p>
-          <h2 id="discover-title">Fem veje ind i værkerne</h2>
-        </div>
-        <div class="discovery-grid" id="category-links" aria-label="Tematiske indgange"></div>
-      </section>
-
-      <section class="works-section" id="works" aria-labelledby="works-title">
-        <div class="section-heading wide">
-          <p class="eyebrow">Udvalgte værker</p>
-          <h2 id="works-title">Kurateret efter tema, ikke efter upload-dato</h2>
+      <section class="featured-section" id="featured" aria-labelledby="featured-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Stop / Se</p>
+          <h2 id="featured-title">Udvalgte værker</h2>
           <p>
-            Hver gruppe giver luft omkring et mindre udvalg. Brugeren kan derfor vælge en retning
-            først og derefter fordybe sig i de enkelte billeder.
+            Et mørkere, mere kurateret første møde. Her får billederne lov til at stå stærkt,
+            mens korte tekster viser sig, når man går tættere på.
           </p>
         </div>
-        <div class="work-groups" id="work-groups"></div>
+        <div class="featured-grid" id="featured-grid" aria-label="Kurateret udvalg"></div>
       </section>
 
-      <section class="text-section" id="text" aria-labelledby="text-title">
-        <div class="quote-block">
-          <p class="eyebrow">Kunstnertekst</p>
-          <h2 id="text-title">Der findes ingen lande uden skygger</h2>
-          <p>
-            Lisbeth Sahls billeder kredser om mennesker i rum, hvor fladen fastholdes og figurerne
-            bliver billeder på følelser, sindstilstande og erindring.
-          </p>
-          <p>
-            I denne v1 står teksten som en kort indgang frem for en lang mur af tekst. Den fulde
-            tekst kan senere foldes ud på en separat side eller i en læs-mere-visning.
-          </p>
-          <cite>Baseret på tekst af Bjørn Ignatius Øckenholt</cite>
+      <section class="theme-overview" id="themes" aria-labelledby="themes-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Forstå</p>
+          <h2 id="themes-title">Fire temaer at gå på opdagelse i</h2>
         </div>
+        <div class="theme-rail" id="theme-rail" aria-label="Tematiske indgange"></div>
       </section>
 
-      <section class="cv-section" id="cv" aria-labelledby="cv-title">
-        <div class="section-heading">
-          <p class="eyebrow">CV</p>
-          <h2 id="cv-title">Udvalgte nedslag</h2>
+      <section class="theme-sections" aria-labelledby="theme-sections-title">
+        <h2 class="sr-only" id="theme-sections-title">Tematiske værksektioner</h2>
+        <div class="theme-groups" id="theme-groups"></div>
+      </section>
+
+      <section class="sequence-section" id="sequence" aria-labelledby="sequence-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Føl</p>
+          <h2 id="sequence-title">En scroll-sekvens som en lille udstilling</h2>
+          <p>
+            De samme værker foldes ud i et langsommere tempo, så siden også kan føles som en
+            vandring gennem stemninger i stedet for kun et galleri.
+          </p>
         </div>
-        <div class="cv-grid">
+        <div class="sequence-list" id="sequence-list"></div>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="about-card">
+          <p class="eyebrow">Om Lisbeth Sahl Bauditz</p>
+          <h2 id="about-title">Personlig, enkel, og stadig med tyngde.</h2>
+          <p>
+            Lisbeth Sahls billeder kredser om mennesker, relationer og rum, hvor følelserne ligger
+            tæt under overfladen. I denne version får værkerne lov til at stå i en mørkere ramme,
+            så blikket først møder maleriet og derefter ordene.
+          </p>
+          <a class="text-link" href="#contact">Kontakt Lisbeth</a>
+        </div>
+        <div class="about-meta">
           <article>
-            <span>2024, 2022, 2020</span>
-            <h3>VK censurerede udstillinger</h3>
-            <p>Nyere censurerede udstillinger samles som korte, scanbare højdepunkter.</p>
+            <span>Tekst</span>
+            <p>Billeder på følelser, sindstilstande og erindring.</p>
           </article>
           <article>
-            <span>2013</span>
-            <h3>KS, Kunstnernes Sommerudstilling</h3>
-            <p>Et vigtigt udstillingspunkt fremhæves uden at drukne resten af siden.</p>
+            <span>Visning</span>
+            <p>Hero, kurateret grid, temaer og en langsom udstillingssekvens.</p>
           </article>
           <article>
-            <span>2011</span>
-            <h3>Roskilde Avis Pris</h3>
-            <p>Prisen for “Tattooed arm” får plads som kvalitetsmarkør og nysgerrighedspunkt.</p>
+            <span>Detalje</span>
+            <p>Klik på et værk og bladre videre med pile eller tastaturet.</p>
           </article>
         </div>
       </section>
@@ -114,8 +107,7 @@
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div>
           <p class="eyebrow">Kontakt</p>
-          <h2 id="contact-title">Kontakt Lisbeth</h2>
-          <p>For køb, udstillinger eller spørgsmål om værkerne.</p>
+          <h2 id="contact-title">For køb, udstilling eller spørgsmål</h2>
         </div>
         <div class="contact-actions">
           <a class="button primary" href="mailto:lisbeth.sahl@gmail.com">lisbeth.sahl@gmail.com</a>
@@ -125,6 +117,7 @@
     </main>
 
     <footer class="site-footer">
+      <p>Lisbeth Sahl Bauditz</p>
       <p>V1 prototype baseret på eksisterende materiale fra sahlart.dk.</p>
     </footer>
 
@@ -134,12 +127,21 @@
         <button class="modal-close" type="button" aria-label="Luk værkvisning" data-close-modal>
           <span aria-hidden="true">&times;</span>
         </button>
-        <img id="modal-image" src="" alt="">
+        <div class="modal-visual">
+          <button class="modal-arrow prev" type="button" aria-label="Forrige værk" data-prev-art>
+            <span aria-hidden="true">&#8249;</span>
+          </button>
+          <img id="modal-image" src="" alt="">
+          <button class="modal-arrow next" type="button" aria-label="Næste værk" data-next-art>
+            <span aria-hidden="true">&#8250;</span>
+          </button>
+        </div>
         <div class="modal-copy">
-          <p class="eyebrow" id="modal-category"></p>
+          <p class="eyebrow" id="modal-theme"></p>
           <h2 id="modal-title"></h2>
           <p class="modal-meta" id="modal-meta"></p>
           <p id="modal-description"></p>
+          <p class="modal-counter" id="modal-counter"></p>
         </div>
       </article>
     </div>
